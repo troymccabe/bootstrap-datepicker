@@ -1,0 +1,85 @@
+/*!
+ * Datepicker - a Date picker for Bootstrap3
+ *
+ */
+@import "variables";
+
+.datepicker {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+
+  th,
+  td {
+    .button-variant(@day-color, @day-bg, @day-border);
+
+    border-radius: 2px;
+    cursor: pointer;
+    font-size: @datepicker-font-size;
+    text-align: center;
+    vertical-align: middle;
+  }
+
+  td:focus {
+    outline: none;
+  }
+
+  .btn-previous,
+  .btn-viewmode,
+  .btn-next,
+  .week th,
+  &.month td,
+  .btn-today {
+    padding: 6px;
+  }
+
+  &.year td,
+  &.decade td {
+    padding: 15px;
+  }
+
+  &.decade td {
+    padding-left: 12px;
+    padding-right: 12px;
+  }
+
+  .btn-next,
+  .btn-previous {
+    height: 27px;
+    padding-top: 0;
+    width: 27px;
+  }
+
+  .weeknumber {
+    font-size: .6em;
+  }
+
+  .week th:hover,
+  .weeknumber-header:hover,
+  .weeknumber:hover,
+  .disabled:hover {
+    background-color: transparent;
+    cursor: default;
+  }
+
+  .disabled,
+  .disabled:hover,
+  .inactive {
+    color: @day-inactive-color;
+  }
+
+  .today,
+  .today:hover {
+    .button-variant(@day-today-color, @day-today-bg, @day-today-border);
+  }
+
+  .selected,
+  .selected:hover {
+    .button-variant(@day-selected-color, @day-selected-bg, @day-selected-border);
+  }
+
+  .btn-viewmode.disabled {
+    color: inherit;
+  }
+}
